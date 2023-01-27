@@ -1,4 +1,4 @@
-package br.eng.pedro_mendes.shopping_list.ui.add_shoping_list_item
+package br.eng.pedro_mendes.shopping_list.ui.add_shopping_list_item
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

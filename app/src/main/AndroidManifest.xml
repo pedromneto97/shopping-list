@@ -12,6 +12,9 @@
         android:theme="@style/Theme.ShoppingList"
         tools:targetApi="31">
         <activity
+            android:name=".ui.add_shopping_list_item.AddShoppingListItemActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
