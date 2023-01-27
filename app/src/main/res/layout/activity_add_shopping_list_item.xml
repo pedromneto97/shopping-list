@@ -3,6 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.add_shoping_list_item.AddShoppingListItemActivity">
+    tools:context=".ui.add_shopping_list_item.AddShoppingListItemActivity">
 
 </androidx.constraintlayout.widget.ConstraintLayout>
