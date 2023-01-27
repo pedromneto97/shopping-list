@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Shopping List</string>
+    <string name="add_shopping_list_item">Adicionar item a lista de compras</string>
 </resources>
