@@ -15,7 +15,7 @@
             android:name=".ui.add_shopping_list_item.AddShoppingListItemActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.main_activity.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

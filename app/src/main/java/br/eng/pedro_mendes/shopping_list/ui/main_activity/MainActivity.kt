@@ -1,4 +1,4 @@
-package br.eng.pedro_mendes.shopping_list
+package br.eng.pedro_mendes.shopping_list.ui.main_activity
 
 import android.content.Intent
 import android.os.Bundle
