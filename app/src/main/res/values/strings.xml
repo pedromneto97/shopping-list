@@ -1,4 +1,14 @@
 <resources>
     <string name="app_name">Shopping List</string>
     <string name="add_shopping_list_item">Adicionar item a lista de compras</string>
+    <string name="name_label">Produto</string>
+    <string name="quantity_label">Quantidade</string>
+    <string name="kg">KG</string>
+    <string name="liter">Litro</string>
+    <string name="gram">Grama</string>
+    <string name="unity">Unidade</string>
+    <string name="save">Salvar</string>
+    <string name="product_name_cannot_be_empty">O nome do produto não pode estar vazio</string>
+    <string name="quantity_must_be_an_integer">A quantidade precisa ser um número inteiro válido</string>
+    <string name="quantity_cannot_be_empty">A quantidade não pode estar vazio</string>
 </resources>
