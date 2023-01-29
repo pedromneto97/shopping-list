@@ -3,8 +3,8 @@ package br.eng.pedro_mendes.shopping_list.ui.main_activity
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import br.eng.pedro_mendes.shopping_list.data.ShoppingListItem
 import br.eng.pedro_mendes.shopping_list.databinding.ActivityMainBinding
@@ -12,6 +12,7 @@ import br.eng.pedro_mendes.shopping_list.ui.add_shopping_list_item.AddShoppingLi
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
+    private val viewModel: MainViewModel by viewModels()
     private val activityResultLauncher =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { activityResult ->
             if (activityResult.resultCode == RESULT_OK) {
@@ -23,7 +24,7 @@ class MainActivity : AppCompatActivity() {
                             } else {
                                 it.getParcelableExtra<ShoppingListItem>(RESULT_TAG)
                             }
-                        Log.i("RESULT", shoppingListItem.toString())
+                        viewModel.add(shoppingListItem!!)
                     }
                 }
 
@@ -34,9 +35,27 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        initializeViewModel()
         setupListeners()
+        setupObservers()
     }
+
+    private fun setupObservers() {
+        setShoppingListObserver()
+    }
+
+    private fun setShoppingListObserver() {
+        viewModel.shoppingList.observe(this) {
+            binding.apply {
+                recycleViewShoppingList.adapter = ShoppingListAdapter(
+                    it,
+                    viewModel::setCheck
+                )
+            }
+        }
+    }
+
+    private fun initializeViewModel() = viewModel.initialize()
 
     private fun setupListeners() {
         setupAddShoppingListButton()
