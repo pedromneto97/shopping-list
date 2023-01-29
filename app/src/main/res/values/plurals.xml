@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="list_length">
+        <item quantity="one">%d produto cadastrado</item>
+        <item quantity="other">%d produtos cadastrados</item>
+    </plurals>
+</resources>

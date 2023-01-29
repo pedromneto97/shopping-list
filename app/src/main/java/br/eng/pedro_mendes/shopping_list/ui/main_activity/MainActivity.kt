@@ -6,6 +6,7 @@ import android.os.Bundle
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import br.eng.pedro_mendes.shopping_list.R
 import br.eng.pedro_mendes.shopping_list.data.ShoppingListItem
 import br.eng.pedro_mendes.shopping_list.databinding.ActivityMainBinding
 import br.eng.pedro_mendes.shopping_list.ui.add_shopping_list_item.AddShoppingListItemActivity
@@ -51,6 +52,15 @@ class MainActivity : AppCompatActivity() {
                     it,
                     viewModel::setCheck
                 )
+                textItemListLength.text = if (it.isEmpty()) {
+                    getString(R.string.empty_list)
+                } else {
+                    resources.getQuantityString(
+                        R.plurals.list_length,
+                        it.size,
+                        it.size
+                    )
+                }
             }
         }
     }

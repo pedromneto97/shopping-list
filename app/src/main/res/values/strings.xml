@@ -14,4 +14,6 @@
     <string name="quantity_cannot_be_empty">A quantidade não pode estar vazio</string>
     <string name="tool_product_name">Batatinha</string>
     <string name="tool_quantity_with_unit">1 KG</string>
+    <string name="empty_list">Nenhum produto cadastrado</string>
+    <string name="tools_list_length">10 itens cadastrados</string>
 </resources>
