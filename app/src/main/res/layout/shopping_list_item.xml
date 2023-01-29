@@ -17,7 +17,8 @@
             android:id="@+id/text_product_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="24sp"
+            android:textSize="20sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/check_shopping_item"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="@string/tool_product_name" />
