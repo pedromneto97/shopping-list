@@ -50,7 +50,8 @@ class MainActivity : AppCompatActivity() {
             binding.apply {
                 recycleViewShoppingList.adapter = ShoppingListAdapter(
                     it,
-                    viewModel::setCheck
+                    viewModel::setCheck,
+                    viewModel::deleteItem,
                 )
                 textItemListLength.text = if (it.isEmpty()) {
                     getString(R.string.empty_list)

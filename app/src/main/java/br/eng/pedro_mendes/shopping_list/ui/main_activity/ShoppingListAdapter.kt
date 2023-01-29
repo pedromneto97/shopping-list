@@ -12,6 +12,7 @@ import br.eng.pedro_mendes.shopping_list.databinding.ShoppingListItemBinding
 class ShoppingListAdapter(
     private val shoppingList: List<ShoppingListItem>,
     private val onCheckItem: (index: Int, isChecked: Boolean) -> Unit,
+    private val onDeleteItem: (index: Int) -> Unit,
 ) : RecyclerView.Adapter<ShoppingListAdapter.ViewHolder>() {
     private lateinit var binding: ShoppingListItemBinding
 
@@ -19,6 +20,13 @@ class ShoppingListAdapter(
         fun bind(item: ShoppingListItem, index: Int) {
             setShoppingListItem(item = item)
             setOnCheckCallback(index)
+            setOnDeleteItem(index)
+        }
+
+        private fun setOnDeleteItem(index: Int) {
+            binding.buttonDeleteItem.setOnClickListener {
+                onDeleteItem(index)
+            }
         }
 
         private fun setOnCheckCallback(index: Int) {

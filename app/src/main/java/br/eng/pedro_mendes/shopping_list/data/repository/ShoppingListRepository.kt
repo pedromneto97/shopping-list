@@ -16,6 +16,8 @@ class ShoppingListRepository {
         Log.i("ShoppingListRepository", "Index: $index - $value")
     }
 
+    fun deleteItem(index: Int) = _shoppingList.removeAt(index)
+
     fun clear() = _shoppingList.clear()
 
     fun get(): List<ShoppingListItem> = _shoppingList.toList()

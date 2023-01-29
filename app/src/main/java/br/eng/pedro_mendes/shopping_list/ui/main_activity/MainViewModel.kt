@@ -32,4 +32,9 @@ class MainViewModel : ViewModel() {
         shoppingListRepository.add(shoppingListItem)
         updateShoppingList()
     }
+
+    fun deleteItem(index: Int) {
+        shoppingListRepository.deleteItem(index)
+        updateShoppingList()
+    }
 }
