@@ -6,9 +6,12 @@
     <string name="kg">KG</string>
     <string name="liter">Litro</string>
     <string name="gram">Grama</string>
-    <string name="unity">Unidade</string>
+    <string name="unit">Unidade</string>
+    <string name="text_quantity">%1$d %2$s</string>
     <string name="save">Salvar</string>
     <string name="product_name_cannot_be_empty">O nome do produto não pode estar vazio</string>
     <string name="quantity_must_be_an_integer">A quantidade precisa ser um número inteiro válido</string>
     <string name="quantity_cannot_be_empty">A quantidade não pode estar vazio</string>
+    <string name="tool_product_name">Batatinha</string>
+    <string name="tool_quantity_with_unit">1 KG</string>
 </resources>
