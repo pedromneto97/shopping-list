@@ -33,7 +33,7 @@ class AddShoppingListItemActivity : AppCompatActivity() {
                 R.id.rb_kg -> Measure.KG
                 R.id.rb_gram -> Measure.GRAM
                 R.id.rb_liter -> Measure.LITER
-                R.id.rb_unity -> Measure.UNITY
+                R.id.rb_unity -> Measure.UNIT
                 else -> Measure.KG
             }
             Log.i("MEASURE", measure.toString())
